@@ -4,11 +4,11 @@
  */
 public class Produkt {
     private String name;
-    private int price;
+    private double price;
     private double rating;
     private  int quantity;
 
-    public Produkt(String name, int price, double rating, int quantity ) {
+    public Produkt(String name, double price, double rating, int quantity ) {
         this.name = name;
         this.price = price;
         this.rating = rating;
@@ -19,7 +19,7 @@ public class Produkt {
         return name;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
@@ -33,7 +33,7 @@ public class Produkt {
 
     @Override
     public String toString() {
-        return String.format("Name of produkt: %s. (%d), rating %.2f, quantity of the storage %d ",
+        return String.format("Назва продукту: %s. [%.2f Euro], рейтинг: [%.2f], кількість на складі: [%d] ",
                 name, price,  rating, quantity)+System.lineSeparator();
     }
 }
